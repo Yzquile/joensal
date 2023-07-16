@@ -8,7 +8,8 @@
 }
 
 body {
-    background: #071952;
+    background: #071051;
+    transition: 3s;
 }
 
 .header {
@@ -116,6 +117,19 @@ body {
     scale: 1.1;
     color: aliceblue;
 }
+.home-imgHover {
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 500px;
+    height: 100%;
+    transition: 3s;
+}
+.home-imgHover:hover {
+    opacity: 0.8;
+    background: #071051;
+}
+
 .links {
     position: absolute;
     bottom: 50px;
