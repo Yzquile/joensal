@@ -33,6 +33,10 @@ body {
     font-weight: 600;
 }
 
+.logo:hover {
+    scale: 1.1;
+}
+  
 .logo::before {
     content: '';
     position: absolute;
@@ -117,18 +121,6 @@ body {
 .home-content .btn-box a:hover {
     scale: 1.1;
     color: aliceblue;
-}
-.home-imgHover {
-    position: absolute;
-    top: 0;
-    right: 50px;
-    width: 500px;
-    height: 100%;
-    transition: 3s;
-}
-.home-imgHover:hover {
-    opacity: 0.8;
-    background: #071052;
 }
 
 .links {
