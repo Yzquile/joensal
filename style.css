@@ -40,7 +40,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #071952;
+    background: #071051;
     animation: showRight 1s ease forwards;
     animation-delay: .4s;
 }
@@ -87,7 +87,7 @@ body {
     color: #97feed;
     font-size: 28px;
     font-weight: 700;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 .home-content p {
     font-size: 17px;
@@ -127,25 +127,26 @@ body {
 }
 .home-imgHover:hover {
     opacity: 0.8;
-    background: #071051;
+    background: #071052;
 }
 
 .links {
-    position: absolute;
-    bottom: 50px;
-    width: 150px;
+    position: relative;
+    top: 0; 
+    right: 0;
+    width: 100px;   
 }
 
 .links a {
-    display: inline-flex;
     text-decoration: none;
     font-size: 35px;
-    height: 40px;
+    height: 50px;
     width: 50px;
+    margin: 5px;
 }
 
 .copyright {
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     color: #0b666a;
 }
