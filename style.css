@@ -26,7 +26,7 @@ body {
 
 .logo {
     font-size: 25px;
-    color: #35A29F; 
+    color: #97feed; 
     text-decoration: none;
     font-weight: 600;
 }
@@ -69,9 +69,41 @@ body {
 }
 .home-content p {
     font-size: 17px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
-.btn-box {
-    border: 1px;
-    border-color: aliceblue;
+.home-content .btn-box {
+    width: 120px;
+    height: 60px;
+    margin-left: 40px;
+}
+.home-content .btn-box a {
+    color: #35A29F;
+    height: 60px;
+    width: 110px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #97feed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    letter-spacing: 1px;
+}
+.home-content .btn-box a:hover {
+    scale: 1.1;
+    color: aliceblue;
+}
+.links {
+    position: absolute;
+    bottom: 50px;
+    width: 150px;
+}
+
+.links a {
+    display: inline-flex;
+    text-decoration: none;
+    font-size: 35px;
+    height: 40px;
+    width: 50px;
 }
