@@ -70,6 +70,7 @@ body {
     padding: 0 10%;
     background: url(idok2.jpg);
     background-size: cover;
+    animation: transition 0.75s;
 }
 
 .home-content {
@@ -163,26 +164,32 @@ body {
 .contact {
     display: flex;
     align-items: center;
-    height: 90vh;
+    height: 100vh;
     padding: 0 10%;
+    animation: transition 0.75s;
 }
 .contact .contact-content {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 .contact .contact-content h1 {
+    color: #97feed;
+    top: 25%;
     display: flex;
     justify-content: center;
-    color: #97feed;
+}
+.contact .contact-content h4 {
+    display: flex;
+    justify-content: center;
+    color: #35A29F;
 }
 .contact .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 350px;    
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
 }
 .contact .form input {
     width: 100%;
@@ -193,13 +200,15 @@ body {
     color:aliceblue;
     font-size: 15px;
     letter-spacing: 1px;
-    
-   
 }
+
 .contact .contact-btn-box {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
-    
+    top: 150px;
+    animation: transition2 0.75s;
 }
 .contact .contact-btn-box a {
     display: flex;
@@ -232,6 +241,15 @@ body {
     color: rgba(255,255,255,0.5);
     font-style: italic;
     letter-spacing: 2px;
+}
 
-
+@keyframes transition {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
