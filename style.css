@@ -144,9 +144,54 @@ body {
     width: 50px;
     margin: 5px;
 }
-
-.copyright {
+.footer {
+    bottom: 0;
+}
+.footer .copyright {
+    position: absolute;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
+    width: 100%;
     color: #0b666a;
+}
+.footer .copyright p {
+    bottom: 0;
+    height: 0;
+}
+
+/* Contact */
+.contact {
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    padding: 0 10%;
+}
+.contact .contact-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact .contact-content h1 {
+    display: flex;
+    justify-content: center;
+    color: #97feed;
+}
+.contact .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.contact .form input {
+    width: 100%;
+    margin: 20px 0;
+    background: rgba(0,0,0,0);
+    border: none;
+    border-bottom: 1px solid #97feed ;
+}
+.contact .contact-btn-box {
+    display: flex;
+    justify-content: center;
 }
