@@ -175,6 +175,7 @@ body {
 .contact .contact-content h4 {
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #35A29F;
 }
 .contact .form {
@@ -244,4 +245,67 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* ABOUT PAGE*/
+.about {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 15%;
+    background: url(idok2.jpg);
+    background-size: cover;
+    animation: transition 0.75s;
+}
+.about-content {
+    max-width: 700px;
+    height: 400px;
+    margin: 100px 0 auto;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-content h1 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 600;
+    color: aliceblue;
+}
+
+.about-content h3 {
+    color: #97feed;
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.about-content p {
+    font-size: 17px;
+    padding-bottom: 20px;
+    color: #97feed;
+}
+.about-content a {
+    text-decoration: underline;
+    font-size: 17px;
+    padding-bottom: 20px;
+    color: #97feed;
+}
+.about-paragraph {
+    text-indent: 50px;
+}
+.about-footer {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+}
+.about-footer .copyright {
+    color: #0b666a;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0;
 }
