@@ -16,7 +16,8 @@ body {
     padding-bottom: 6.7rem;
     box-sizing: inherit;
 }
-.html {
+
+html {
     height: 100;
 }
 
@@ -301,65 +302,38 @@ footer {
     scale: 1.2;
     transition: all 0.7s ease-in;
 }
+
 /* PORTFOLIO PAGE */
+.container {
+    min-height: 100%;
+    overflow-y: auto;
+}
 .portfolio {
-    padding: 5rem 0;
-    background-color: #f5f5f5;
-  }
-  
-  .slider {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
+.portfolio .portfolio-container {
     position: relative;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+    text-align: center;    
+}
+.portfolio .portfolio-container iframe {
+    margin: 1rem;
+}
+.portfolio .portfolio-container h1 {
+    color:#97feed;
+}
+.portfolio .portfolio-container h4 {
+    color: #35a29f;
+}
+  .gaming-videos-container {
+    position: relative;
+    text-align: center;
   }
+.gaming-videos-container .gaming-videos iframe {
+    margin: 1rem;
+}
   
-  .slider-container {
-    display: flex;
-    align-items: center; /* Center the videos vertically */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .slider-btn {
-    position: absolute;
-    top: 50%;
-    font-size: 2rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    cursor: pointer;
-    z-index: 1;
-    padding: 1rem;
-    border-radius: 50%;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .slider-btn--left {
-    left: 0;
-  }
-  
-  .slider-btn--right {
-    right: 0;
-  }
-  
-  .slider-container iframe {
-    flex: 0 0 280px;
-    width: 280px;
-    height: 157px;
-    border: none;
-    transition: transform 0.3s ease-in-out; /* Add smooth transition */
-  }
-  
-  /* Increase the size of the current video */
-  .slider-container iframe.current-video {
-    width: 560px;
-    height: 314px;
-    flex: 0 0 560px; /* Adjust flex properties */
-  }
-  
-  .slider-btn:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
   
     
   
