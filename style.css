@@ -115,7 +115,7 @@ body {
 .home-content .btn-box a {
     color: #35A29F;
     height: 60px;
-    width: 110px;
+    width: 140px;
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
@@ -123,7 +123,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 30px;
     letter-spacing: 1px;
 }
 .home-content .btn-box a:hover {
@@ -148,9 +148,7 @@ body {
 footer {
     position: absolute;
     text-align: center;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0%;
     width: 100%;
     color: #0b666a;
 }
@@ -212,12 +210,13 @@ footer {
     border: 2px solid #35A29F;
     padding: 15px 32px;
     width: 100px;
-    border-radius: 10px;
+    border-radius: 30px;
     color:#97feed;
     text-decoration: none;
 }
 .contact .contact-btn-box a:hover {
     scale: 1.1;
+    color: aliceblue;
 }
 
 #msg {
@@ -249,34 +248,32 @@ footer {
         transform: translateY(0);
     }
 }
-
+#menu-item {
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
 /* ABOUT PAGE*/
 .about {
-    display: flex;
+    display: grid;
+    position: relative;
     align-items: center;
-    min-height: 100vh;
-    padding: 0 15%;
-    background: url(idok2.jpg);
-    background-size: cover;
+    gap: 2rem;
     animation: transition 0.75s;
+    grid-template-columns: 50% 40%;
+    margin: 2rem 7rem;
 }
+
 .about-content {
-    max-width: 700px;
-    height: 400px;
-    margin: 100px 0 auto;
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    padding-bottom: 20px;
+    text-align: justify;
 }
 
 .about-content h1 {
-    margin: 0;
     font-size: 50px;
     font-weight: 600;
     color: aliceblue;
+    text-align: center;
 }
 
 .about-content h3 {
@@ -284,17 +281,23 @@ footer {
     font-size: 28px;
     font-weight: 700;
 }
+
 .about-content p {
     font-size: 17px;
-    padding: 10px;
     color: #97feed;
+    text-indent: 50px;
 }
+
 .about-content a {
     text-decoration: underline;
     font-size: 17px;
     color: #97feed;
 }
-.about-paragraph {
-    text-indent: 50px;
+.my-image img {
+    max-width: 100%;
+    justify-self: end;
 }
-
+.my-image img:hover {
+    scale: 1.2;
+    transition: all 0.7s ease-in;
+}
