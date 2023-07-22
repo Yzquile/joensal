@@ -146,6 +146,10 @@ html {
     width: 50px;
     margin: 5px;
 }
+.links a .fa-brands:hover {
+    scale: 1.1;
+}
+
 footer {
     position: absolute;
     text-align: center;
@@ -173,15 +177,18 @@ footer {
     top: 25%;
     display: flex;
     justify-content: center;
+    margin: 1rem;
 }
 .contact .contact-content h4 {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #35A29F;
+    margin-bottom: 3rem;
 }
 .contact .form {
     position: absolute;
+    margin-top: 1rem;
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%); 
@@ -237,6 +244,36 @@ footer {
     color: rgba(255,255,255,0.5);
     font-style: italic;
     letter-spacing: 2px;
+}
+.contact-links {
+    position: absolute;
+    flex-direction: column;
+    min-width: 100%;
+    top: 80%;
+} 
+.contact-links h3 {
+    display: flex;
+    justify-content: center;
+    color: #97feed;
+}
+.hire-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.hire-links img {
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+.hire-links i {
+    font-size: 45px;
+    height: auto;
+    margin: 10px;
+}
+.hire-links a:hover {
+    scale: 1.1;
 }
 
 @keyframes transition {
@@ -332,6 +369,7 @@ footer {
   }
   .gaming-videos-container h2{
     color: #97feed;
+    margin-top: 3rem;
   }
 .gaming-videos-container .gaming-videos iframe {
     margin: 1rem;
