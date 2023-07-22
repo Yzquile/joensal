@@ -326,13 +326,41 @@ footer {
 .portfolio .portfolio-container h4 {
     color: #35a29f;
 }
-  .gaming-videos-container {
+.gaming-videos-container {
     position: relative;
     text-align: center;
+  }
+  .gaming-videos-container h2{
+    color: #97feed;
   }
 .gaming-videos-container .gaming-videos iframe {
     margin: 1rem;
 }
+
+.short-form-videos-container {
+    padding: 2rem;
+  }
+.short-form-videos-container h2 {
+    color: #97feed;
+    padding: 1rem;
+  }
+  
+  
+  .short-form-videos {
+    display: flex;
+    justify-content: space-between;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    overflow-x: scroll;
+  }
+
+  .short-form-videos iframe {
+    margin-right: 1rem;
+    width: 357px;
+    height: 635px;
+    border: none;
+  }
+  
   
   
     

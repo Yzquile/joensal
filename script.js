@@ -40,4 +40,3 @@ sr.reveal('.my-image', { delay: 450, origin: 'right' });
     carousel.css("transform", `translateX(${translateXValue}%)`);
   }
 
-  
