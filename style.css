@@ -63,6 +63,13 @@ html {
     }
 }
 
+@keyframes transition {
+    from {
+@@ -332,6 +369,7 @@ footer {
+  }
+}
+}
+
 .navbar a {
     font-size: 20px;
     font-weight: 500;
@@ -159,97 +166,106 @@ footer {
 }
 
 /* Contact */
+/* Updated CSS for the contact section */
 .contact {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
-    padding: 0 10%;
-    animation: transition 0.75s;
-}
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 3rem 0;
+    animation: slide-down 0.75s;
+    transition: transform 1.5s ease-in-out;
+}       
+
 .contact .contact-content {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    align-items: center;
 }
+
 .contact .contact-content h1 {
     color: #97feed;
-    top: 25%;
-    display: flex;
-    justify-content: center;
     margin: 1rem;
-}
-.contact .contact-content h4 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #35A29F;
+}
+
+.contact .contact-content h4 {
+    color: #35a29f;
     margin-bottom: 3rem;
 }
+
 .contact .form {
-    position: absolute;
-    margin-top: 1rem;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-}
-.contact .form input {
+    max-width: 600px;
     width: 100%;
-    margin: 20px 0;
-    background: rgba(0,0,0,0);
+    margin-top: 1rem;
+}
+
+.contact .form input,
+.contact .form textarea {
+    width: 100%;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0);
     border: none;
-    border-bottom: 1px solid #97feed ;
-    color:aliceblue;
-    font-size: 15px;
+    border-bottom: 1px solid #97feed;
+    color: aliceblue;
+    font-size: 16px;
     letter-spacing: 1px;
+    padding: 10px;
 }
 
 .contact .contact-btn-box {
-    position: relative;
-    width: 100%;
     display: flex;
     justify-content: center;
-    top: 150px;
+    margin-top: 30px;
     animation: transition2 0.75s;
+    margin-bottom: 5rem;
 }
+
 .contact .contact-btn-box a {
     display: flex;
     justify-content: center;
-    border: 2px solid #35A29F;
-    padding: 15px 32px;
-    width: 100px;
+    border: 2px solid #35a29f;
+    padding: 10px 25px;
+    width: auto;
     border-radius: 30px;
-    color:#97feed;
+    color: #97feed;
     text-decoration: none;
+    font-size: 20px;
 }
+
 .contact .contact-btn-box a:hover {
     scale: 1.1;
     color: aliceblue;
 }
 
 #msg {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     resize: vertical;
     min-height: 100px;
     width: 100%;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     border: none;
-    border-bottom: 1px solid #97feed ;
-    color:aliceblue;
-    font-size: 15px;
+    border-bottom: 1px solid #97feed;
+    color: aliceblue;
+    font-size: 14px;
     letter-spacing: 1px;
+    padding: 10px;
 }
 
 ::-webkit-input-placeholder {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255, 255, 255, 0.5);
     font-style: italic;
     letter-spacing: 2px;
 }
+
 .contact-links {
     position: absolute;
     flex-direction: column;
     min-width: 100%;
     top: 80%;
+    animation: fade-in 0.75s;
 } 
 .contact-links h3 {
     display: flex;
@@ -276,22 +292,41 @@ footer {
     scale: 1.1;
 }
 
-@keyframes transition {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .contact .form input,
+    .contact .form textarea {
+        font-size: 12px;
+        padding: 8px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .contact .contact-btn-box a {
+        padding: 8px 20px;
+        font-size: 12px;
+    }
+
+    #msg {
+        font-size: 12px;
+        padding: 8px;
     }
 }
-#menu-item {
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1001;
-    display: none;
+/* Apply hover effect on touch-enabled devices */
+@media (hover: hover) and (pointer: fine) {
+  .hire-links a:hover {
+    transform: scale(1.1);
+    /* Add any other hover styles you want for desktop */
+  }
 }
+
+/* Apply hover effect on mobile devices */
+@media (hover: none) {
+  .hire-links a:active {
+    transform: scale(1.1);
+    /* Add any other active styles you want for mobile */
+  }
+}
+
+
 /* ABOUT PAGE*/
 .about {
     display: grid;
@@ -305,6 +340,7 @@ footer {
 
 .about-content {
     text-align: justify;
+    animation: slide-down 0.75s;
 }
 
 .about-content h1 {
@@ -334,16 +370,21 @@ footer {
 .my-image img {
     max-width: 100%;
     justify-self: end;
+    animation: fade-in 0.75s;
 }
 .my-image img:hover {
     scale: 1.2;
     transition: all 0.7s ease-in;
+}
+#menu-item {
+    display: none;
 }
 
 /* PORTFOLIO PAGE */
 .container {
     min-height: 100%;
     overflow-y: auto;
+    animation: fade-in 0.75s;
 }
 .portfolio {
     margin: 0;
@@ -401,7 +442,21 @@ footer {
   
   
   
-    
-  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes slide-down {
+    from {
+      transform: translateY(-10%);  
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
   
   
