@@ -63,13 +63,6 @@ html {
     }
 }
 
-@keyframes transition {
-    from {
-@@ -332,6 +369,7 @@ footer {
-  }
-}
-}
-
 .navbar a {
     font-size: 20px;
     font-weight: 500;
@@ -90,12 +83,13 @@ html {
     padding: 0 10%;
     background: url(idok2.jpg);
     background-size: cover;
-    animation: transition 0.75s;
+    animation: fade-in 3s;
 }
 
 .home-content {
     max-width: 700px;
     height: 400px;
+    animation: slide-down 0.75s;
 }
 
 .home-content h1 {
@@ -292,6 +286,7 @@ footer {
     scale: 1.1;
 }
 
+
 /* Media Queries for responsiveness */
 @media screen and (max-width: 768px) {
     .contact .form input,
@@ -336,6 +331,7 @@ footer {
     animation: transition 0.75s;
     grid-template-columns: 50% 40%;
     margin: 2rem 7rem;
+    padding: 3rem;
 }
 
 .about-content {
@@ -370,7 +366,7 @@ footer {
 .my-image img {
     max-width: 100%;
     justify-self: end;
-    animation: fade-in 0.75s;
+    animation: fade-in 3s;
 }
 .my-image img:hover {
     scale: 1.2;
@@ -390,6 +386,7 @@ footer {
     margin: 0;
     padding: 0;
     min-height: 100%;
+    animation: slide-down 0.75s;
 }
 .portfolio .portfolio-container {
     position: relative;
