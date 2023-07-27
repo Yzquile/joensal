@@ -223,7 +223,7 @@ footer {
     margin-bottom: 5rem;
 }
 
-.contact .contact-btn-box a {
+.contact .contact-btn-box #sendButton {
     display: flex;
     justify-content: center;
     border: 2px solid #35a29f;
@@ -233,9 +233,11 @@ footer {
     color: #97feed;
     text-decoration: none;
     font-size: 20px;
+    background: none;
+    cursor: pointer;
 }
 
-.contact .contact-btn-box a:hover {
+.contact .contact-btn-box #sendButton:hover {
     scale: 1.1;
     color: aliceblue;
 }

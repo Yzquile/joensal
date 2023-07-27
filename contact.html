@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <title>Contact - Jonathan</title>
 </head>
 
@@ -33,21 +33,21 @@
     <section class="contact">
         <div class="contact-content">
             <h1>Contact Me</h1>
-            <h4>If you want to get in touch with me via email just send me a message.</h4>
+            <h4>If you want to get in touch with me via email, just send me a message.</h4>
         </div>
         <div class="form">
-            <form>
-                <input type="text" placeholder="Name" />
-                <input type="text" placeholder="Email" />
-                <!-- <input id="msg" type="textarea" placeholder="Message..."/>-->
-                <textarea id="msg" placeholder="Message..."></textarea>
+            <form id="myForm" action="https://formsubmit.co/teamwaper@gmail.com" method="POST">
+                <input name="name" type="text" placeholder="Name" required/>
+                <input name="email" type="email" placeholder="Email Address" required/>
+                <textarea name="message" id="msg" placeholder="Message..." required></textarea>
             </form>
         </div>
-
+    
         <div class="contact-btn-box">
-            <a href="">Send</a>
+            <button id="sendButton" type="submit" >Send</button>
         </div>
     </section>
+    
 
     <div class="contact-links">
         <h3>Or reach me out on these sites:</h3>
@@ -59,7 +59,7 @@
                     class="fa-brands fa-linkedin fa-xl" style="color: #3eea7a;"></i></a>
         </li>
     </div>
-
+    <script src="script.js"></script>
     <footer>
         &copy; 2023 Web Portfolio by Jonathan. All Rights Reserved.</p>
     </footer>

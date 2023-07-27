@@ -6,37 +6,42 @@ menu.onclick = () => {
     navlist.classList.toggle('open');
 };
 
-// ScrollReveal configuration
-const sr = ScrollReveal({
-    distance: '65px',
-    duration: 2600,
-    delay: 450,
-    reset: true
-});
+document.getElementById('myForm').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
 
-sr.reveal('.about', { delay: 200, origin: 'left' });
-sr.reveal('.my-image', { delay: 450, origin: 'right' });
+  // Get form data
+  const formData = new FormData(event.target);
 
-// Portfolio Slider$(document).ready(function () {
-  const carousel = $(".carousel");
-  const videos = carousel.find(".video-wrapper");
-  const prevButton = $(".prev-button");
-  const nextButton = $(".next-button");
-
-  let currentVideoIndex = 0;
-
-  prevButton.on("click", function () {
-    currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
-    updateCarousel();
+  // Check if all fields are filled
+  let allFieldsFilled = true;
+  formData.forEach((value) => {
+    if (value.trim() === '') {
+      allFieldsFilled = false;
+    }
   });
 
-  nextButton.on("click", function () {
-    currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    const translateXValue = -currentVideoIndex * 100;
-    carousel.css("transform", `translateX(${translateXValue}%)`);
+  if (!allFieldsFilled) {
+    alert("Please fill in all the fields.");
+    return;
   }
 
+  // Perform your custom form submission here using JavaScript's Fetch API or XMLHttpRequest
+  const url = 'https://formsubmit.co/teamwaper@gmail.com';
+  const options = {
+    method: 'POST',
+    body: formData
+  };
+
+  fetch(url, options)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the response data as needed
+      console.log('Form submitted successfully:', data);
+      alert('Sent Successfully!');
+      document.getElementById('myForm').reset(); // Reset the form after successful submission
+    })
+    .catch(error => {
+      console.error('Form submission error:', error);
+      alert('Error occurred. Please try again.');
+    });
+});
