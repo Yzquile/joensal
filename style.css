@@ -306,6 +306,7 @@ footer {
         font-size: 12px;
         padding: 8px;
     }
+    
 }
 /* Apply hover effect on touch-enabled devices */
 @media (hover: hover) and (pointer: fine) {
@@ -324,19 +325,19 @@ footer {
 }
 
 
-/* ABOUT PAGE*/
+/* ABOUT PAGE */
 .about {
-    display: grid;
+    display: flex; /* Use flexbox for the layout */
     position: relative;
     align-items: center;
     gap: 2rem;
     animation: transition 0.75s;
-    grid-template-columns: 50% 40%;
     margin: 2rem 7rem;
     padding: 3rem;
 }
 
 .about-content {
+    flex: 1; /* Allow the content to grow and take available space */
     text-align: justify;
     animation: slide-down 0.75s;
 }
@@ -346,37 +347,65 @@ footer {
     font-weight: 600;
     color: aliceblue;
     text-align: center;
-}
-
-.about-content h3 {
-    color: #97feed;
-    font-size: 28px;
-    font-weight: 700;
+    margin: 0; /* Remove the default margin to avoid spacing issues */
 }
 
 .about-content p {
     font-size: 17px;
     color: #97feed;
     text-indent: 50px;
+    margin: 0; /* Remove the default margin to avoid spacing issues */
 }
 
-.about-content a {
-    text-decoration: underline;
-    font-size: 17px;
-    color: #97feed;
-}
-.my-image img {
-    max-width: 100%;
-    justify-self: end;
+.about .my-image {
+    width: 40%; /* Set a fixed width for the image container */
+    display: flex; /* Use flexbox for the image and its container */
+    justify-content: flex-end; /* Align the image to the right */
     animation: fade-in 3s;
 }
+
+.my-image img {
+    max-width: 100%;
+    width: 100%; /* Make sure the image takes the full width of its container */
+    max-height: 100%;
+    object-fit: contain; /* Adjust the image to fit the container */
+}
+
 .my-image img:hover {
-    scale: 1.2;
+    transform: scale(1.2);
     transition: all 0.7s ease-in;
 }
+
 #menu-item {
     display: none;
 }
+
+/* Media Queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .about {
+        margin: 2rem 1rem; /* Reduce the margin for smaller screens */
+        padding: 0; /* Remove padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        align-items: center;
+    }
+
+    .about-content {
+        max-width: 100%; /* Set the max-width to occupy the full width */
+        text-align: center; /* Center the content on smaller screens */
+    }
+
+    .about .my-image {
+        justify-content: center; /* Center the image horizontally */
+        margin-top: 1rem; /* Add some spacing between content and image */
+        width: 100%;
+    }
+    .about .about-content p {
+        text-align: justify;
+        margin: 0;
+        padding: 0 15px;
+    }
+}
+
 
 /* PORTFOLIO PAGE */
 .container {
