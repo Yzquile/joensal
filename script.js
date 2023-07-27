@@ -7,7 +7,7 @@ menu.onclick = () => {
 };
 
 document.getElementById('myForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
+  event.preventDefault();
 
   // Get form data
   const formData = new FormData(event.target);
