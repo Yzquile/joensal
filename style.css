@@ -95,7 +95,7 @@ html {
         display: block;
     }
 
-    #check:checked ~ .navbar {
+    #check:checked~.navbar {
         left: 0;
     }
 }
@@ -284,6 +284,11 @@ footer {
     .home-content .btn-box {
         display: flex;
         justify-content: center;
+        margin-left: 30%;
+    }
+
+    .home-content .btn-box a {
+        margin: 0 auto;
     }
 
     footer {
@@ -299,6 +304,8 @@ footer {
         background: #071051;
     }
 }
+
+
 
 /* Contact */
 /* Updated CSS for the contact section */
