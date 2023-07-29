@@ -48,6 +48,19 @@ html {
     scale: 1.1;
 }
 
+.checkbtn {
+    font-size: 25px;
+    color: aqua;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
 /* Media query for header */
 @media screen and (max-width: 768px) {
     .header {
@@ -63,31 +76,60 @@ html {
         z-index: 100;
     }
 
-    #menu-item {
+    .checkbtn {
         display: block;
     }
 
-    .navbar,
-    .links {
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        /* Add some spacing between navbar and links */
+    .navbar {
+        position: absolute;
+        width: 100%;
+        height: 30vh;
+        background: rgba(00, 11, 93, .8);
+        top: 90px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
     }
 
-    .navbar a,
-    .links a {
-        margin: 10px;
-        /* Add spacing between links */
+    .navbar a {
+        display: block;
     }
 
-    .header.menu-open .navbar,
-    .header.menu-open .links {
-        display: flex;
-        /* Show navbar and links when menu is open */
+    #check:checked ~ .navbar {
+        left: 0;
     }
 }
+
+@media screen and (max-width: 600px) {
+    .header {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 10%;
+        background: transparent;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .checkbtn {
+        display: inline-block;
+    }
+
+    .navbar {
+        position: absolute;
+        width: 100%;
+        height: 45vh;
+        background: rgba(0, 11, 93, 0.8);
+        top: 90px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+}
+
 
 
 
